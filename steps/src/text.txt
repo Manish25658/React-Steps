@@ -1,0 +1,45 @@
+What is state?
+In props  the data comes outside the component
+
+But what we need to hold data in component?And what if we want to the change the UI as result of an action?
+We use "STATE"
+
+STATE IS THE DATA THAT THE COMPONENT CAN HOLD OVER TIME WITH NECESSARY INFORMATION
+Eg of STATE:Notification count
+            text content of an input field
+            active tab in tab component
+ Other eg:so when we click on a tab it becomes active
+ when we read the notfications no.of notifications will decrease
+
+When we updating the state it will re-render that component UI(Updated View of that particular component)
+
+Data is always is in sync with UI and this done using state
+
+Adding state to a component is done in 3 steps
+1.1st we add  new state variable
+2. We use it in a code ..that is usually JSX
+3.We update the state in event handler
+
+1.add new state variable
+useState(1)//here we are creating a new state variable and useState is a function and we pass in default parameter ie 1
+useState will return an array
+We get 2 values in console
+0:1 (default STATE)
+1.f (f is a function where we update the state variable)        
+
+const[step,setStep]=useState//destructuring
+//[step] is 1
+//setStep is function
+
+2. using step in jsx
+<div className={`${step >=1 ?`active`:""}}`>1</div>
+
+3.updating the state in eventhandler
+
+useState is hook..we can identify hooks as it satrts with "use" keyword
+we can only call hooks "useState" on top level of the function
+
+State is like memory of the component..eventhough we 1 and 2 is selected..if we close and open the component..it will still show the 2nd number message
+
+
+
